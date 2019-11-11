@@ -1,0 +1,5 @@
+rootProject.name = 'online-store-kotlin'
+
+include 'app'
+include 'offer'
+include 'offer-api'

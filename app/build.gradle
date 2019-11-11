@@ -1,0 +1,19 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm"
+    id "org.jetbrains.kotlin.plugin.spring"
+}
+
+dependencies {
+    implementation project(":offer")
+    implementation project(":offer-api")
+
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    // json
+    implementation "com.fasterxml.jackson.core:jackson-core:$versionsJackson"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$versionsJackson"
+
+    // spring
+    implementation "org.springframework.boot:spring-boot-starter-web:$versionSpringBoot"
+}
