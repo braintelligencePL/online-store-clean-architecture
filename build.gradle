@@ -6,9 +6,9 @@ plugins {
 }
 
 dependencies {
-    implementation project(":app")
-    implementation project(":offer")
-    implementation project(":offer-api")
+    implementation project(":services:app")
+    implementation project(":services:offer")
+    implementation project(":services:offer-api")
 }
 
 allprojects {

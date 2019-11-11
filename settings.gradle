@@ -1,5 +1,5 @@
-rootProject.name = 'online-store-kotlin'
+rootProject.name = 'kotlin-online-store-ddd'
 
-include 'app'
-include 'offer'
-include 'offer-api'
+include 'services:app'
+include 'services:offer'
+include 'services:offer-api'

@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    api project(":offer-api")
+    api project(":services:offer-api")
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
