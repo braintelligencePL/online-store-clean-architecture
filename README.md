@@ -22,4 +22,4 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 #### 📦 `step-2-offer-api` - offer api design
 
-📜 Basically we'll create a facade (it is a design pattern) that is going to be the only thing that other modules (bounded contexts) will interact with. So later we are gonna have modules like `cart`, `order`, `payment` and these things will use `offer-api` to interact with `offer` domain.
+📜 Basically we'll create a facade (it is a design pattern) that is going to be the only thing that other modules (bounded context from DDD world) will interact with. So later we are gonna have modules like `cart`, `order`, `payment` and these things will use `offer-api` to interact with `offer` domain.
