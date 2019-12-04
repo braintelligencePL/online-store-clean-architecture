@@ -12,7 +12,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 #### 📦 `step-1-starter` - basic structure of the project. 
 
-📜 Show separation of domain and infrastructure. 
+📜 Shows separation of domain and infrastructure. 
 
 **Domain** - contains only pure `Kotlin` code (business code) and does not contain `Spring` (infrastructure) dependencies. In our application representation of domain is `offer` and `offer-api`. Later we will discuss what those modules contain. 
 
