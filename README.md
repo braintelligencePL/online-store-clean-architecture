@@ -1,10 +1,9 @@
 # Online Store 
 
-There is a lot of names for this type of architecture. Each of us has different style for the same thing. You'll find here  combination of various good practices. Some of which are hype terms like DDD, TDD practices along with hexagonal architecture. We'll try to keep high cohesion and low coupling. You'll see what that means.
+There is a lot of names for this type of architecture. Each of us has different style for the same thing. You'll find here  combination of various good practices. Some of which are hype terms like DDD, TDD, FP practices along with hexagonal architecture. We'll try to keep high cohesion and low coupling. You'll see what that means. 
 
 ## Tech stack: 
-- Kotlin
-- Spring
+- Kotlin, Spring, Arrow
 
 ## Branches:
 
