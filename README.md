@@ -14,8 +14,8 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 📜 Show separation of domain and infrastructure. 
 
-📜 *Domain* - contains only pure `Kotlin` code (business code) and does not contain `Spring` (infrastructure) dependencies. In our application representation of domain is `offer` and `offer-api`.
+**Domain** - contains only pure `Kotlin` code (business code) and does not contain `Spring` (infrastructure) dependencies. In our application representation of domain is `offer` and `offer-api`.
 
-📜 *Infrastructure* - contains `Spring` dependecies. Rest, Soap, GraphQL and all other things like logging, search engines, queues... 
+**Infrastructure** - contains `Spring` dependecies. Rest, Soap, GraphQL and all other things like logging, search engines, queues... 
 
 
