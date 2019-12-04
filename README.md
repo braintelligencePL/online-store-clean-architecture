@@ -1,12 +1,12 @@
-# Online Store
+# Online Store with DDD, TDD in practice. 
 
-### Tech stack: 
+## Tech stack: 
 - Kotlin
 - Spring
 
-### Branches:
+## Branches:
 
-
+<br>
 
 #### 📦 `step-1-starter` - basic structure of the project. 
 
