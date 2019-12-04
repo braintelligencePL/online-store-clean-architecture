@@ -1,6 +1,6 @@
 # Online Store 
 
-There is a lot of names for this type of architecture. Each of us has different style for the same thing. This repository is a combination of various good practices. Some of which are hype terms like DDD, TDD practices along with hexagonal architecture.
+There is a lot of names for this type of architecture. Each of us has different style for the same thing. You'll find here  combination of various good practices. Some of which are hype terms like DDD, TDD practices along with hexagonal architecture.
 
 ## Tech stack: 
 - Kotlin
