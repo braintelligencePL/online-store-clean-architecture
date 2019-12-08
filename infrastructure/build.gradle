@@ -6,6 +6,7 @@ plugins {
 dependencies {
     implementation project(":services:offer")
     implementation project(":services:offer-api")
+    implementation project(":services:shared-kernel")
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"

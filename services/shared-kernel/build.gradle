@@ -1,0 +1,28 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm"
+}
+
+dependencies {
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    // arrow
+    api "io.arrow-kt:arrow-core:$versionsArrow"
+    api "io.arrow-kt:arrow-syntax:$versionsArrow"
+    api "io.arrow-kt:arrow-fx:$versionsArrow"
+
+    // test
+    api "org.jetbrains.kotlin:kotlin-test"
+    api "org.jetbrains.kotlin:kotlin-test-junit"
+    api "org.assertj:assertj-core:$versionsAssertj"
+
+    // jackson
+    api "com.fasterxml.jackson.core:jackson-annotations:${versionsJackson}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${versionsJackson}"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:${versionsJackson}"
+
+    // zalando problem
+    api "org.zalando:problem:$versionZalandoProblem"
+
+    implementation "javax.validation:validation-api:$versionsJavaxValidation"
+}
