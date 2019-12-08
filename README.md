@@ -10,7 +10,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 <br>
 
-### 📦 `step-1-starter` - basic structure of the project. 
+#### 📦 `step-1-starter` - basic structure of the project. 
 
 📜 Shows separation of domain and infrastructure. 
 
@@ -20,7 +20,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 <br>
 
-### 📦 `step-2-offer-api` - offer api design
+#### 📦 `step-2-offer-api` - offer api design
 
 📜 **offer** + **offer-api** = **microservice**
 
@@ -31,4 +31,4 @@ There is a lot of names for this type of architecture. Each of us has different 
 **shared-kernel** - module that contains all the things that will be shared between other modules (microservices) like `offer`, `cart`, `order`, `payment`. 
 
 #### 🧱Addons
-**[facade](https://github.com/iluwatar/java-design-patterns/tree/master/facade) (design pattern)** - provides a simplified interface to a complex subsystem. In our case `OfferAPI.kt` is a facade.
+- **[facade](https://github.com/iluwatar/java-design-patterns/tree/master/facade) (design pattern)** - provides a simplified interface to a complex subsystem. In our case `OfferAPI.kt` is a facade.
