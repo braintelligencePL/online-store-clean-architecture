@@ -66,7 +66,7 @@ It is a sealed class with restricted errors known by our domain (in that case of
 
 ##### `AppExceptionHandler` from `app`.
 
-This is our infrastructure. We map models from domain to infrastructure. We create JSON response with `ResponseEntity`. For example we map domain HttpStatus (from **zalando-problem** library) to infrastructure HttpStatus (from **spring-web** framework).
+This is our infrastructure. We map models from domain to infrastructure. We create JSON response with `ResponseEntity`. For example we map domain HttpStatus (from **zalando-problem**) to infrastructure HttpStatus (from **spring-web**).
 
 <br>
 
