@@ -54,14 +54,19 @@ Left side of the `Either` is known error that is represented by `sealed class Of
 
 #### `AppThrowableError` from `shared-kernel`
 
-We override and ignore things we don't want in response. Frontend developer doesn't need our stacktrace he just needs relevant information for him. Similar to above JSON. 
+We override and ignore things we don't want in response. Frontend developer doesn't need our stacktrace he just needs relevant information for him. Which means response similar to above JSON. 
 
 #### `AppError` from `shared-kernel`.
 
-Generic error class that is inherited by `OfferError`.
+Generic error class that is inherited by `OfferError` and will be inherited later by other modules.
 
-3. `OfferError` from `offer-api`. It is a sealed class with restricted errors known by our domain (offer). In other words, errors that we know might happen during runtime of our application.  
-4. `AppExceptionHandler` from `app` which is our infrastructure. Mapping models from domain to infrastructure. Simply we create `ResponseEntity` which is `Spring` related thing. In other words creation of JSON that was shown above. 
+#### `OfferError` from `offer-api`
+
+It is a sealed class with restricted errors known by our domain (in that case offer). In other words, errors that we know might happen during runtime of our application.   
+
+### `AppExceptionHandler` from `app`.
+
+This is our infrastructure. We map models from domain to infrastructure. We create some `ResponseEntity` in case of an error.
 
 <br>
 
