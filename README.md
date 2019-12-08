@@ -32,13 +32,13 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 <br>
 
-We also introduced functional **error handling**. Our domain has `Either<OfferError, OfferResponse>`. 
+We also introduced **functional error handling** - `Either<OfferError, OfferResponse>`. 
 
-`Either.left` is some known error. 
+`Either.right` is the correct value `OfferResponse`. 
 
-`Either.right` is the correct value.
+`Either.left` is some known error `OfferError`.
 
-Left side of the `Either` is known error that is represented by `sealed class OfferError()`. In other words we only have restricted set of classes that our domain can generate. There is only room for the things we expect. That structure will generate simple and clear error to the frontend developer.
+Error is represented by sealed class. What we have here is a restricted set of classes that our domain can generate. There is only room for errors that we expect. Thanks to that we generate error to the frontend developer that is clear and simple: 
 
 ```json
 {
