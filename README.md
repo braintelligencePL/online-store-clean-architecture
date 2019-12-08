@@ -32,7 +32,13 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 <br>
 
-We also introduced functional **error handling**. Our domain has `Either<OfferError, OfferResponse>` which is pretty much self-explanatory. `Either.left` is some known error and `Either.right` is the correct value. Important thing is that left side of the `Either` is known error that is represented by `sealed class OfferError()`. In other words we only have restricted `OfferErrors` that our domain can generate. There is only room for the things we expected. No room for NullPointerExceptions and other not expected Exceptions. Generally we want simple, clear errors that we expected might happen. 
+We also introduced functional **error handling**. Our domain has `Either<OfferError, OfferResponse>`. 
+
+`Either.left` is some known error. 
+
+`Either.right` is the correct value.
+
+Left side of the `Either` is known error that is represented by `sealed class OfferError()`. In other words we only have restricted set of classes that our domain can generate. There is only room for the things we expect. That structure will generate simple and clear error to the frontend developer.
 
 ```json
 {
@@ -44,10 +50,16 @@ We also introduced functional **error handling**. Our domain has `Either<OfferEr
 
 <br>
 
-**Flow of the error handling:**
+**Error handling details:**
 
-1. `AppThrowableError` from `shared-kernel`. We ignore things that we don't want. Frontend developer doesn't need our stacktrace he just needs relevant information for him. Similar to above JSON.  
-2. `AppError` from `shared-kernel`. Generic error class that is inherited by `OfferError`.
+#### `AppThrowableError` from `shared-kernel`
+
+We override and ignore things we don't want in response. Frontend developer doesn't need our stacktrace he just needs relevant information for him. Similar to above JSON. 
+
+#### `AppError` from `shared-kernel`.
+
+Generic error class that is inherited by `OfferError`.
+
 3. `OfferError` from `offer-api`. It is a sealed class with restricted errors known by our domain (offer). In other words, errors that we know might happen during runtime of our application.  
 4. `AppExceptionHandler` from `app` which is our infrastructure. Mapping models from domain to infrastructure. Simply we create `ResponseEntity` which is `Spring` related thing. In other words creation of JSON that was shown above. 
 
