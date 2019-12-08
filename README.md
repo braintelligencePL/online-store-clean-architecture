@@ -22,7 +22,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 ### 📦 `step-2-offer-api` - offer api design
 
-📜 We can easily say that `offer` and `offer-api` is a microservice. It's separated from other modules and it can be easily moved to another separate repository if needed. High cohesion means keeping parts of a code base that are related to each other in a single place. Low coupling, at the same time, is about separating unrelated parts of the code base as much as possible. That's exactly what we want to achieve.
+📜 We can easily say that `offer` and `offer-api` is a microservice. It's separated from other modules and it can be easily moved to another (separate) repository if needed. High cohesion means keeping parts of a code base that are related to each other in a single place. Low coupling, at the same time, is about separating unrelated parts of the code base as much as possible. That's exactly what we want to achieve.
 
 **offer-api** - other modules can interact with `offer` via `offer-api`. In that case `OfferAPI.kt` is a facade for the module. All the models that reside in `offer-api` are for public use. Thanks to that we have clear separations of concerns.
 
