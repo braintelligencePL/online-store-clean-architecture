@@ -32,7 +32,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 <br>
 
-We also introduced **error handling**. Our domain has `Either<OfferError, OfferResponse>` which is pretty much self-explanatory. `Either.left` is some known error and `Either.right` is the correct value. Important thing is that left side of the `Either` is known error that is represented by `sealed class OfferError()`. In other words we only have restricted `OfferErrors` that our domain can generate. There is only room for the things we expected. No room for NullPointerExceptions and other not expected Exceptions. Generally we want simple and clear error shown to the frontend developer like below: 
+We also introduced **error handling**. Our domain has `Either<OfferError, OfferResponse>` which is pretty much self-explanatory. `Either.left` is some known error and `Either.right` is the correct value. Important thing is that left side of the `Either` is known error that is represented by `sealed class OfferError()`. In other words we only have restricted `OfferErrors` that our domain can generate. There is only room for the things we expected. No room for NullPointerExceptions and other not expected Exceptions. Generally we want simple, clear errors that we expected might happen. 
 
 ```json
 {
