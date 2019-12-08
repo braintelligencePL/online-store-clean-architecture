@@ -22,7 +22,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 #### 📦 `step-2-offer-api` - offer api design
 
-📜 `offer` + `offer-api` = `microservice`
+📜 **offer** + **offer-api** = **microservice**
 
 **offer-api** - other modules can interact with `offer` via `offer-api`. In that case `OfferAPI.kt` is a facade for the module. All the models that reside in `offer-api` are for public use. Thanks to that we have clear separations of concerns.
 
