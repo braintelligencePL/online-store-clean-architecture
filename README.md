@@ -28,7 +28,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 **offer** - implementation of `offer-api`. Business logic. All nitty-gritty details of our app.
 
-**shared-kernel** - module that contains all the things that will be shared between other modules (microservices) like `offer`, `cart`, `order`, `payment`.
+**shared-kernel** - module that contains all the things that will be shared between modules like `offer`, `cart`, `order`, `payment`.
 
 We also introduced error handling. Our domain has `Either<OfferError, OfferResponse>` which is pretty much self-explanatory. `Either.left` is some known error and `Either.right` is correct value. Important thing is that left side of the `Either` is known error that is checked
 
