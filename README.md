@@ -30,8 +30,22 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 **shared-kernel** - module that contains all the things that will be shared between modules like `offer`, `cart`, `order`, `payment`.
 
-We also introduced error handling. Our domain has `Either<OfferError, OfferResponse>` which is pretty much self-explanatory. `Either.left` is some known error and `Either.right` is correct value. Important thing is that left side of the `Either` is known error that is checked
+We also introduced error handling. Our domain has `Either<OfferError, OfferResponse>` which is pretty much self-explanatory. `Either.left` is some known error and `Either.right` is the correct value. Important thing is that left side of the `Either` is known error that is represented by `sealed class OfferError()`. In other words we only have restricted `OfferErrors` that our domain can generate. There is only room for the things we expected. No room for NullPointerExceptions and other not expected Exceptions. Generally we want simple and clear error shown to the frontend developer like below: 
 
+```json
+{
+    "offerId": "111",
+    "status": "NOT_FOUND",
+    "title": "Offer with id=111 not found"
+}
+```
+
+**Flow of the error handling:**
+
+1. `AppThrowableError` from `shared-kernel`. We ignore things that we don't want. Frontend developer doesn't need our stacktrace just relevant information for him. 
+2. `AppError` from `shared-kernel`. Generic class that is inherited by `OfferError`.
+3. `OfferError` from `offer-api`. It is a sealed class with restricted errors known by our domain. In other words, errors that we know might happen during runtime of our application.  
+4. `AppExceptionHandler` from `app` which is our infrastructure. Mapping models from domain to infrastructure. Simply we create `ResponseEntity` which is `Spring` related thing. Here is create JSON that was shown above. 
 
 #### 🧱Addons
 - **[facade](https://github.com/iluwatar/java-design-patterns/tree/master/facade) (design pattern)** - provides a simplified interface to a complex subsystem. In our case `OfferAPI.kt` is a facade.
