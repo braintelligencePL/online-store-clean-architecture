@@ -1,4 +1,4 @@
-rootProject.name = 'kotlin-online-store-ddd'
+rootProject.name = 'online-store-clean-architecture'
 
 include 'infrastructure'
 include 'services:offer'
