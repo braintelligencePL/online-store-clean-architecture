@@ -1,10 +1,10 @@
 package pl.braintelligence.offer.service
 
-import pl.braintelligence.offer.offer.model.OfferResponse
+import pl.braintelligence.offer.model.response.Offer
 
 internal class OfferService {
 
-    fun getOffers(): OfferResponse {
+    fun getOffers(): Offer {
         TODO("not implemented")
     }
 
