@@ -42,10 +42,10 @@ We also introduced error handling. Our domain has `Either<OfferError, OfferRespo
 
 **Flow of the error handling:**
 
-1. `AppThrowableError` from `shared-kernel`. We ignore things that we don't want. Frontend developer doesn't need our stacktrace just relevant information for him. 
-2. `AppError` from `shared-kernel`. Generic class that is inherited by `OfferError`.
-3. `OfferError` from `offer-api`. It is a sealed class with restricted errors known by our domain. In other words, errors that we know might happen during runtime of our application.  
-4. `AppExceptionHandler` from `app` which is our infrastructure. Mapping models from domain to infrastructure. Simply we create `ResponseEntity` which is `Spring` related thing. Here is create JSON that was shown above. 
+1. `AppThrowableError` from `shared-kernel`. We ignore things that we don't want. Frontend developer doesn't need our stacktrace he just needs relevant information for him. Similar to above JSON.  
+2. `AppError` from `shared-kernel`. Generic error class that is inherited by `OfferError`.
+3. `OfferError` from `offer-api`. It is a sealed class with restricted errors known by our domain (offer). In other words, errors that we know might happen during runtime of our application.  
+4. `AppExceptionHandler` from `app` which is our infrastructure. Mapping models from domain to infrastructure. Simply we create `ResponseEntity` which is `Spring` related thing. In other words creation of JSON that was shown above. 
 
 #### 🧱Addons
 - **[facade](https://github.com/iluwatar/java-design-patterns/tree/master/facade) (design pattern)** - provides a simplified interface to a complex subsystem. In our case `OfferAPI.kt` is a facade.
