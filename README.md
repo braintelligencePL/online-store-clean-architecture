@@ -20,7 +20,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 <br>
 
-### 📦 `step-2-offer-api` - offer api design, error handler
+### 📦 `step-2-offer-api` - offer api design, error handler, shared-kernel
 
 📜 We can easily say that `offer` and `offer-api` is a microservice. It's separated from other modules and it can be easily moved to another (separate) repository if needed. High cohesion means keeping parts of a code base that are related to each other in a single place. Low coupling, at the same time, is about separating unrelated parts of the code base as much as possible. That's exactly what we want to achieve.
 
@@ -28,7 +28,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 **offer** - implementation of `offer-api`. Business logic. All nitty-gritty details of our app.
 
-**shared-kernel** - contains all the things that will be shared between modules (`offer`, `cart`, `order`, `payment`).
+**shared-kernel** - it is concept from DDD world. Contains all the things that will be shared between modules (`offer`, `cart`, `order`, `payment`). Also some generic solutions to common problems related with our domain. 
 
 <br>
 
