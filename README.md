@@ -24,9 +24,9 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 📜 `offer` + `offer-api` = `microservice`
 
-**offer-api** - other modules can interact with `offer` via `offer-api`. In that case `OfferAPI.kt` is a facade for the module. All the models that reside in `offer-api` are for public use. Thanks to that we have clear separations of concerns for different modules.
+**offer-api** - other modules can interact with `offer` via `offer-api`. In that case `OfferAPI.kt` is a facade for the module. All the models that reside in `offer-api` are for public use. Thanks to that we have clear separations of concerns.
 
-**offer** - implementation of `offer-api`. Business logic. All nitty-gritty details of our app.  
+**offer** - implementation of `offer-api`. Business logic. All nitty-gritty details of our app.
 
 **[facade](https://github.com/iluwatar/java-design-patterns/tree/master/facade) (design pattern)** - provides a simplified interface to a complex subsystem. In our case `OfferAPI.kt` is a facade.
 
