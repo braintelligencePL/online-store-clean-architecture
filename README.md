@@ -28,7 +28,7 @@ There is a lot of names for this type of architecture. Each of us has different 
 
 **offer** - implementation of `offer-api`. Business logic. All nitty-gritty details of our app.
 
-**shared-kernel** - contains all the things that will be shared between modules like `offer`, `cart`, `order`, `payment`.
+**shared-kernel** - contains all the things that will be shared between modules (`offer`, `cart`, `order`, `payment`).
 
 <br>
 
