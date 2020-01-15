@@ -9,7 +9,7 @@ dependencies {
     implementation project(":infrastructure")
     implementation project(":services:offer")
     implementation project(":services:offer-api")
-    implementation project(":services:shared-kernel")
+    implementation project(":services:support-domain")
 }
 
 allprojects {

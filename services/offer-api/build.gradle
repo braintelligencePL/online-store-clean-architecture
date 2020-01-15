@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    api project(":services:shared-kernel")
+    api project(":services:support-domain")
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
