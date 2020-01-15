@@ -1,9 +1,9 @@
-package pl.braintelligence.offer.model.request
+package pl.braintelligence.product.model.request
 
 import java.math.BigDecimal
 import java.net.URI
 
-data class NewOfferRequest(
+data class NewProductRequest(
     val name: String,
     val description: String,
     val price: BigDecimal,

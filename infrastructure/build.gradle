@@ -4,8 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation project(":services:offer")
-    implementation project(":services:offer-api")
+    implementation project(":services:product")
+    implementation project(":services:product-api")
     implementation project(":services:support-domain")
 
     // kotlin

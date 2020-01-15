@@ -1,20 +1,20 @@
-package pl.braintelligence.offer.model
+package pl.braintelligence.product.model
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import org.zalando.problem.Status
 import pl.braintelligence.shared.kernel.error.AppError
 
 @JsonSubTypes(
-    JsonSubTypes.Type(OfferNotFound::class, name = "OFFER_NOT_FOUND")
+    JsonSubTypes.Type(ProductNotFound::class, name = "OFFER_NOT_FOUND")
 )
-sealed class OfferError(
+sealed class ProductError(
     override val title: String,
     override val status: Status
 ) : AppError(title = title, status = status)
 
-data class OfferNotFound(
+data class ProductNotFound(
     val offerId: String
-) : OfferError(
+) : ProductError(
     title = "Offer with id=$offerId not found",
     status = Status.NOT_FOUND
 )

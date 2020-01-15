@@ -1,4 +1,4 @@
-package pl.braintelligence.offer
+package pl.braintelligence.product
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration
 class OfferConfiguration {
 
     @Bean
-    fun offerApi(): OfferAPI = OfferDomain.create()
+    fun offerApi(): ProductAPI = ProductDomain.create()
 
 }

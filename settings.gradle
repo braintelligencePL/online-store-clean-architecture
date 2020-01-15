@@ -1,6 +1,6 @@
 rootProject.name = 'online-store-clean-architecture'
 
 include 'infrastructure'
-include 'services:offer'
-include 'services:offer-api'
+include 'services:product'
+include 'services:product-api'
 include 'services:support-domain'
